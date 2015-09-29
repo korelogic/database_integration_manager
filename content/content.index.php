@@ -418,7 +418,7 @@ class contentExtensionDatabase_integration_managerIndex extends AdministrationPa
 		
 		$createdBy = $data['created-by'];
 		if(empty($createdBy)){
-			$createdBy = Administration::instance()->Author->getFullName();	
+			$createdBy = Administration::instance()->Author()->getFullName();	
 		}
 		$serverUserCreatedByLabel = Widget::Label("Created By",
 			Widget::Input("settings[server][users][created-by][]",$createdBy),
